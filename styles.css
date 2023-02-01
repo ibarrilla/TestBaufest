@@ -1,0 +1,10 @@
+.container{
+    margin-top: 4%;
+}
+.form-control{
+    margin-right: 1em;
+}
+
+body{
+    background: linear-gradient(90deg, #b9deed, #efefef);
+}

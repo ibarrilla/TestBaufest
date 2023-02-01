@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4">
+                <form>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#Exercise1">
+                        Exercise 1
+                      </button>
+                      <br>
+                      <br>
+
+                      <div class="input-group mb-3">
+                        <input type="text" id="string-input" class="form-control">
+                        <button onclick="reverseString()" type="button" class="btn btn-outline-primary">Reverse</button>
+                        
+                      </div>
+                      <p id="outputReverse"></p>
+                </form>
+            </div>
+            <div class="col-sm-4">
+                <form>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#Exercise2">
+                        Exercise 2
+                      </button>
+                      <br>
+                      <br>
+
+                      <div class="input-group mb-3">
+                        <input type="text" id="idInput" class="form-control" placeholder="ej: --name, Facundo, --count, 10">
+                        <button onclick="EjecutarValidacion()" type="button" class="btn btn-outline-primary">Validate</button>
+                        
+                      </div>
+                      <p id="outputValidate"></p>
+                </form>
+            </div>
+            
+            <div class="col-sm-4">
+                <form>
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#Exercise3">
+                    Exercise 3
+                  </button>
+                  <br>
+                  <br>
+
+                  <div class="input-group mb-3">
+                    <input type="text" id="idArrow" class="form-control">
+                    <button onclick="Rotate()" type="button" class="btn btn-outline-primary">Rotate</button>
+                    
+                  </div>
+                  <p id="outputRotate"></p>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+  
+  <!-- Modal Exercise 1-->
+  <div class="modal fade" id="Exercise1" tabindex="-1" role="dialog" aria-labelledby="Exercise1Label" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="Exercise1Label">Exercise 1</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          - Cuando la cadena está vacía, devuelve una cadena vacía. <br>
+          - Cuando el argumento pasado al método es null o undefined retornar un string vacío. <br>
+          - Cuando la cadena tiene exactamente 1 caracter, devolver el mismo caracter. <br>
+          - Cuando la cadena tiene más de 1 caracter, devolver la cadena invertida.  <br>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Modal Exercise 2-->
+  <div class="modal fade" id="Exercise2" tabindex="-1" role="dialog" aria-labelledby="Exercise2Label" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="Exercise2Label">Exercise 2</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Crear una clase ValidateArguments con un método Validate(args) que retorne un int. <br>
+          Retorna: 1 si el usuario necesita información, 0 si está todo ok, -1 si la data/argumentos son invalidos. <br>
+          Los datos pueden ser ingresados en minúscula o mayúscula. <br>
+          - count: un entero entre 10 y 100 inclusive; <br>
+          - name: una cadena de texto entre 3 y 10 caracteres inclusive;<br>
+          - help: el usuario necesita información.<br>
+          La forma que se pide los argumentos es la siguiente: <br> --name,Baufest,--count,25 <br>
+        </div>
+      </div>
+    </div>
+  </div>
+
+ 
+
+  <!-- Modal Exercise 2-->
+  <div class="modal fade" id="Exercise3" tabindex="-1" role="dialog" aria-labelledby="Exercise3Label" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="Exercise3Label">Exercise 2</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Dada una secuencia de N flechas para los 4 puntos cardinales: up ('^'), down ('v'), left ('<'), right ('>'). <br>
+          Desarrollar una funcion Solucion que enviandole un string (S) retorne el número mínimo de flechas que deben girarse para que todas apunten
+          en la misma dirección. <br>
+          Ej: Dado S = <<>  retorna 1;<br>
+          Dado S = <<v>^^^ retorna 4 <br>
+          Dado S = <<< retorna 0 <br>
+          N debe ser un entero entre 1 y 100.
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+    <script src="./practica.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+
+</html>
